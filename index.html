@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Community Solutions | Landscaping &amp; Home Services</title>
+<meta name="description" content="Apex Community Solutions offers landscaping, roofing, framing, concrete, and home repair services with personal attention and fair pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #F4F2ED;
+    --panel: #FFFFFF;
+    --ink: #211F1B;
+    --muted: #6B685F;
+    --green: #33503A;
+    --green-dark: #253A2A;
+    --green-tint: #E7EBE4;
+    --clay: #9C5A34;
+    --line: #DCD7C9;
+    --radius: 3px;
+    --maxw: 1100px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .wordmark{
+    font-family: 'Archivo', system-ui, sans-serif;
+    margin: 0;
+    color: var(--ink);
+  }
+  a{ color: inherit; }
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  section{ padding: 96px 0; }
+  @media (max-width: 720px){
+    section{ padding: 64px 0; }
+    .wrap{ padding: 0 22px; }
+  }
+
+  /* ---------- Buttons & links ---------- */
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 28px;
+    background: var(--green);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background .18s ease;
+  }
+  .btn:hover{ background: var(--green-dark); }
+  .btn.ghost{
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+  }
+  .btn.ghost:hover{ background: var(--ink); color: var(--bg); }
+  .btn.light{
+    background: #fff;
+    color: var(--green-dark);
+  }
+  .btn.light:hover{ background: var(--green-tint); }
+
+  /* ---------- Header ---------- */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(244,242,237,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  header .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .brand{ display:flex; align-items:center; gap: 12px; text-decoration:none; }
+  .brand-mark{ width: 30px; height: 30px; flex-shrink:0; }
+  .brand-text{ line-height: 1.1; }
+  .brand-text .name{ font-weight: 800; font-size: 16px; letter-spacing: 0.3px; }
+  .brand-text .sub{ font-family:'Inter',sans-serif; font-size: 11.5px; color: var(--muted); }
+  header .call{
+    font-family:'Inter',sans-serif;
+    font-weight: 600;
+    font-size: 14.5px;
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--green);
+    padding-bottom: 2px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position: relative;
+    overflow: hidden;
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+  .hero-grid{
+    position:absolute;
+    inset:0;
+    opacity: 0.5;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: linear-gradient(to bottom, black, transparent 88%);
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 88%);
+  }
+  .hero-content{
+    position: relative;
+    max-width: 640px;
+    opacity: 0;
+    transform: translateY(14px);
+    animation: rise .7s ease forwards .1s;
+  }
+  @keyframes rise{ to{ opacity: 1; transform: translateY(0); } }
+  .eyebrow-mark{ display:flex; align-items:center; gap:10px; margin-bottom: 22px; }
+  .eyebrow-mark svg{ width: 22px; height: 22px; }
+  .eyebrow-mark span{ font-size: 13.5px; color: var(--green-dark); font-weight: 600; }
+  .hero h1{
+    font-size: clamp(38px, 5.4vw, 58px);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1.04;
+  }
+  .hero .tagline{
+    font-family:'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--green-dark);
+    margin-top: 20px;
+  }
+  .hero p.statement{
+    margin-top: 16px;
+    font-size: 16.5px;
+    color: var(--muted);
+    max-width: 520px;
+  }
+  .hero-actions{
+    margin-top: 34px;
+    display:flex;
+    align-items:center;
+    gap: 22px;
+    flex-wrap: wrap;
+  }
+  .hero-actions .phone-link{
+    font-family:'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration:none;
+    color: var(--ink);
+    border-bottom: 1.5px solid var(--clay);
+  }
+
+  /* ---------- Services ---------- */
+  .services-head{ max-width: 560px; margin-bottom: 44px; }
+  .services-head h2{ font-size: 30px; font-weight: 800; }
+  .services-head p{ color: var(--muted); margin-top: 12px; font-size: 15.5px; }
+  .service-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+  }
+  .service-row{
+    display:flex;
+    align-items:center;
+    gap: 16px;
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+  }
+  .service-list .service-row:nth-last-child(1),
+  .service-list .service-row:nth-last-child(2){
+    border-bottom: 1px solid var(--line);
+  }
+  .service-mark{
+    width: 8px; height: 8px;
+    background: var(--green);
+    flex-shrink: 0;
+    transform: rotate(45deg);
+  }
+  .service-row span{ font-family:'Archivo', sans-serif; font-weight: 600; font-size: 16.5px; }
+  @media (max-width: 640px){
+    .service-list{ grid-template-columns: 1fr; }
+    .service-list .service-row:nth-last-child(2){ border-bottom: 1px solid var(--line); }
+  }
+
+  /* ---------- Why Apex ---------- */
+  .why{ background: var(--green-tint); }
+  .why-grid{
+    display:grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .why h2{ font-size: 30px; font-weight: 800; margin-bottom: 20px; }
+  .why p{ color: var(--ink); font-size: 16px; max-width: 480px; }
+  .why-points{ display:flex; flex-direction:column; gap: 28px; }
+  .why-point .label{ font-family:'Archivo', sans-serif; font-weight: 700; font-size: 16px; color: var(--green-dark); }
+  .why-point .desc{ font-size: 14.5px; color: var(--muted); margin-top: 6px; }
+  @media (max-width: 780px){
+    .why-grid{ grid-template-columns: 1fr; gap: 36px; }
+  }
+
+  /* ---------- Quote form ---------- */
+  .quote-inner{
+    display:grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 56px;
+  }
+  .quote-copy h2{ font-size: 30px; font-weight: 800; }
+  .quote-copy p{ color: var(--muted); margin-top: 14px; font-size: 15.5px; max-width: 400px; }
+  form.quote-form{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 36px;
+  }
+  .field{ margin-bottom: 20px; }
+  .field label{
+    display:block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 7px;
+  }
+  .field .opt{ color: var(--muted); font-weight: 400; }
+  .field input, .field select, .field textarea{
+    width: 100%;
+    padding: 12px 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #FBFAF7;
+    color: var(--ink);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline: 2px solid var(--green);
+    outline-offset: 1px;
+    background: #fff;
+  }
+  .field textarea{ resize: vertical; min-height: 96px; }
+  .row-2{ display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-note{ font-size: 12.5px; color: var(--muted); margin-top: 14px; }
+  @media (max-width: 780px){
+    .quote-inner{ grid-template-columns: 1fr; gap: 32px; }
+    .row-2{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Footer / contact band ---------- */
+  footer{
+    background: var(--green-dark);
+    color: #F2F1EB;
+    padding: 72px 0 40px;
+  }
+  .footer-top{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 36px;
+    padding-bottom: 44px;
+    border-bottom: 1px solid rgba(242,241,235,0.18);
+  }
+  footer .brand-text .name{ color: #F2F1EB; }
+  footer .brand-text .sub{ color: rgba(242,241,235,0.65); }
+  .footer-contact{ font-size: 15px; }
+  .footer-contact .phone{
+    font-family:'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration:none;
+    color: #F2F1EB;
+    display:block;
+    margin-bottom: 6px;
+  }
+  .footer-contact .area{ color: rgba(242,241,235,0.72); font-size: 14px; }
+  .footer-actions{ display:flex; gap: 14px; flex-wrap: wrap; }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 26px;
+    font-size: 13px;
+    color: rgba(242,241,235,0.55);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 4 L28 27 H4 Z" stroke="#33503A" stroke-width="2.2" stroke-linejoin="round"/>
+        <circle cx="16" cy="4" r="2" fill="#9C5A34"/>
+      </svg>
+      <span class="brand-text">
+        <span class="name">APEX COMMUNITY SOLUTIONS</span><br>
+        <span class="sub">Landscaping &amp; Home Services</span>
+      </span>
+    </a>
+    <a class="call" href="tel:+17607958090">(760) 795-8090</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="eyebrow-mark">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4 L28 27 H4 Z" stroke="#33503A" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="16" cy="4" r="2" fill="#9C5A34"/>
+        </svg>
+        <span>A local crew, doing the job right</span>
+      </div>
+      <h1>Apex Community Solutions</h1>
+      <p class="tagline">Personal attention. Fair pricing. Quality work.</p>
+      <p class="statement">We're a tight-knit crew handling landscaping and home service work &mdash; from a new patio to a full roof tear-out and replacement &mdash; with the kind of attention a small company can give and the pricing to match.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#quote">Request a Quote</a>
+        <a class="phone-link" href="tel:+17607958090">Call or text (760) 795-8090</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="services-head">
+      <h2>Landscaping &amp; Home Services</h2>
+      <p>Seven trades, one crew. If it's not on the list, ask us anyway &mdash; chances are we've handled it before.</p>
+    </div>
+    <div class="service-list">
+      <div class="service-row"><span class="service-mark"></span><span>Landscaping</span></div>
+      <div class="service-row"><span class="service-mark"></span><span>Roofing</span></div>
+      <div class="service-row"><span class="service-mark"></span><span>Framing</span></div>
+      <div class="service-row"><span class="service-mark"></span><span>Concrete</span></div>
+      <div class="service-row"><span class="service-mark"></span><span>Tear-Out &amp; Replacement</span></div>
+      <div class="service-row"><span class="service-mark"></span><span>Hardie Board / Siding</span></div>
+      <div class="service-row"><span class="service-mark"></span><span>Soffit &amp; Fascia</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap why-grid">
+    <div>
+      <h2>Why choose Apex?</h2>
+      <p>What sets Apex apart from bigger outfits is simple: personal attention and price. Because we're small, we can stay flexible and fair &mdash; no corporate markup, no call center. Our crew works hard and works clean, and we treat every yard and home like it's our own.</p>
+    </div>
+    <div class="why-points">
+      <div class="why-point">
+        <div class="label">Personal attention</div>
+        <div class="desc">You'll talk to the people actually doing the work, not a dispatcher.</div>
+      </div>
+      <div class="why-point">
+        <div class="label">Fair, flexible pricing</div>
+        <div class="desc">Small overhead means we can quote honestly and work with your budget.</div>
+      </div>
+      <div class="why-point">
+        <div class="label">A small, hardworking crew</div>
+        <div class="desc">Professional, tireless, and easy to reach from bid to final walkthrough.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="wrap quote-inner">
+    <div class="quote-copy">
+      <h2>Have a project in mind?</h2>
+      <p>Leave your name, phone number, and a short description of the work you'd like done, and we'll get in touch to arrange a free estimate. Appointments for bids are set directly with Sarah.</p>
+    </div>
+
+    <!--
+      FORM SETUP NEEDED:
+      This form posts to Formspree. Create a free account at https://formspree.io,
+      create a form, and replace YOUR_FORM_ID below with the ID Formspree gives you.
+      Submissions will then email straight to whoever handles incoming leads.
+    -->
+    <form class="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="row-2">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="email">Email <span class="opt">(optional)</span></label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="field">
+        <label for="service">Service needed</label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Select a service</option>
+          <option>Landscaping</option>
+          <option>Roofing</option>
+          <option>Framing</option>
+          <option>Concrete</option>
+          <option>Tear-Out &amp; Replacement</option>
+          <option>Hardie Board / Siding</option>
+          <option>Soffit &amp; Fascia</option>
+          <option>Other / Not sure</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="details">Tell us about your project</label>
+        <textarea id="details" name="details" required></textarea>
+      </div>
+      <button class="btn" type="submit" style="width:100%; justify-content:center;">Request a Quote</button>
+      <p class="form-note">We typically reply within one business day to schedule a free estimate.</p>
+    </form>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="brand" href="#top" style="text-decoration:none;">
+        <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4 L28 27 H4 Z" stroke="#F2F1EB" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="16" cy="4" r="2" fill="#9C5A34"/>
+        </svg>
+        <span class="brand-text">
+          <span class="name">APEX COMMUNITY SOLUTIONS</span><br>
+          <span class="sub">Landscaping &amp; Home Services</span>
+        </span>
+      </a>
+      <div class="footer-contact">
+        <a class="phone" href="tel:+17607958090">(760) 795-8090</a>
+        <div class="area">Serving [Your Service Area] and surrounding communities</div>
+      </div>
+      <div class="footer-actions">
+        <a class="btn light" href="tel:+17607958090">Call Now</a>
+        <a class="btn ghost" href="#quote" style="border-color:#F2F1EB; color:#F2F1EB;">Request a Quote</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Apex Community Solutions. All rights reserved.</span>
+      <span>Call or text to schedule a free estimate.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
