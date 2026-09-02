@@ -207,6 +207,57 @@
     .service-list .service-row:nth-last-child(2){ border-bottom: 1px solid var(--line); }
   }
 
+  /* ---------- Before / After gallery ---------- */
+  .gallery{ background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .gallery-note{ font-size: 13.5px; color: var(--clay); margin-top: 12px; font-style: italic; }
+  .gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 44px;
+  }
+  .ba-pair{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .ba-pair figure{ margin: 0; position: relative; }
+  .ba-pair img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .ba-pair figcaption{
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(28,44,69,0.72);
+    padding: 4px 9px;
+    border-radius: 2px;
+  }
+  .gallery-caption{
+    margin-top: 14px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .gallery-caption .edit-hint{
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
   /* ---------- Why Apex ---------- */
   .why{ background: var(--blue-tint); }
   .why-grid{
@@ -369,6 +420,67 @@
   </div>
 </section>
 
+<section class="gallery" id="work">
+  <div class="wrap">
+    <div class="services-head">
+      <h2>Recent Work</h2>
+      <p>A few before-and-afters from jobs around the area.</p>
+      <p class="gallery-note">Placeholder images below &mdash; swap in real project photos any time by replacing the image sources.</p>
+    </div>
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+        <div class="ba-pair">
+          <figure>
+            <img src="https://placehold.co/500x375/e4e5eb/415675?text=Before" alt="Before photo placeholder">
+            <figcaption>Before</figcaption>
+          </figure>
+          <figure>
+            <img src="https://placehold.co/500x375/415675/ffffff?text=After" alt="After photo placeholder">
+            <figcaption>After</figcaption>
+          </figure>
+        </div>
+        <div class="gallery-caption">Project name / location
+          <span class="edit-hint">e.g. "Backyard Landscaping &mdash; Twin Falls, ID"</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <div class="ba-pair">
+          <figure>
+            <img src="https://placehold.co/500x375/e4e5eb/415675?text=Before" alt="Before photo placeholder">
+            <figcaption>Before</figcaption>
+          </figure>
+          <figure>
+            <img src="https://placehold.co/500x375/415675/ffffff?text=After" alt="After photo placeholder">
+            <figcaption>After</figcaption>
+          </figure>
+        </div>
+        <div class="gallery-caption">Project name / location
+          <span class="edit-hint">e.g. "Roof Tear-Out &amp; Replacement"</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <div class="ba-pair">
+          <figure>
+            <img src="https://placehold.co/500x375/e4e5eb/415675?text=Before" alt="Before photo placeholder">
+            <figcaption>Before</figcaption>
+          </figure>
+          <figure>
+            <img src="https://placehold.co/500x375/415675/ffffff?text=After" alt="After photo placeholder">
+            <figcaption>After</figcaption>
+          </figure>
+        </div>
+        <div class="gallery-caption">Project name / location
+          <span class="edit-hint">e.g. "Concrete Patio &amp; Walkway"</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="why" id="why">
   <div class="wrap why-grid">
     <div>
@@ -378,7 +490,7 @@
     <div class="why-points">
       <div class="why-point">
         <div class="label">Personal attention</div>
-        <div class="desc">You’ll talk to the person who actually overseas the work.</div>
+        <div class="desc">You&rsquo;ll talk to the person who actually overseas the work.</div>
       </div>
       <div class="why-point">
         <div class="label">Fair, flexible pricing</div>
