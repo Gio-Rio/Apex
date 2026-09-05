@@ -14,8 +14,8 @@
     --panel: #FFFFFF;
     --ink: #211F1B;
     --muted: #6B685F;
-    --blue: #415675;
-    --blue-dark: #1C2C45;
+    --blue: #3f699a;
+    --blue-dark: #1E3958;
     --blue-tint: #e4e5eb;
     --clay: #9c3434;
     --line: #DCD7C9;
@@ -86,7 +86,7 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    background: rgba(244,242,237,0.92);
+    background: var(--blue-dark);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--line);
   }
@@ -100,9 +100,10 @@
   .brand{ display:flex; align-items:center; gap: 12px; text-decoration:none; }
   .brand-mark{ width: 30px; height: 30px; flex-shrink:0; }
   .brand-text{ line-height: 1.1; }
-  .brand-text .name{ font-weight: 800; font-size: 16px; letter-spacing: 0.3px; }
-  .brand-text .sub{ font-family:'Inter',sans-serif; font-size: 11.5px; color: var(--muted); }
+  .brand-text .name{ font-weight: 800; font-size: 16px; letter-spacing: 0.3px; color: #F2F1EB; }
+  .brand-text .sub{ font-family:'Inter',sans-serif; font-size: 11.5px; color: rgba(242,241,235,0.65); }
   header .call{
+    color: #F2F1EB;
     font-family:'Inter',sans-serif;
     font-weight: 600;
     font-size: 14.5px;
@@ -167,12 +168,24 @@
     flex-wrap: wrap;
   }
   .hero-actions .phone-link{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
     font-family:'Archivo', sans-serif;
     font-weight: 600;
     font-size: 16px;
+    line-height: 1.15;
     text-decoration:none;
     color: var(--ink);
     border-bottom: 1.5px solid var(--clay);
+    padding-bottom: 3px;
+  }
+  .hero-actions .phone-link .phone-sub{
+    font-family:'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--muted);
   }
 
   /* ---------- Services ---------- */
@@ -397,7 +410,10 @@
       <p class="statement">We're a tight-knit crew handling landscaping and home service work &mdash; from a new patio to a full roof tear-out and replacement &mdash; with the kind of attention a small company can give and the pricing to match.</p>
       <div class="hero-actions">
         <a class="btn" href="#quote">Request a Quote</a>
-        <a class="phone-link" href="tel:+17607958090">Text (480) 809-5791</a>
+        <a class="phone-link" href="tel:+14808095791">
+          <span>Call (480) 809-5791</span>
+          <span class="phone-sub">Text preferred</span>
+        </a>
       </div>
     </div>
   </div>
@@ -414,7 +430,7 @@
       <div class="service-row"><span class="service-mark"></span><span>Roofing</span></div>
       <div class="service-row"><span class="service-mark"></span><span>Framing</span></div>
       <div class="service-row"><span class="service-mark"></span><span>Decks, Porches, &amp; Patios</span></div>
-      <div class="service-row"><span class="service-mark"></span><span>Tear-Out &amp; Replacement Concrete</span></div>
+      <div class="service-row"><span class="service-mark"></span><span>Concrete: Tear-Out &amp; Replacement</span></div>
       <div class="service-row"><span class="service-mark"></span><span>Hardie Board / Siding</span></div>
       <div class="service-row"><span class="service-mark"></span><span>Soffit &amp; Fascia</span></div>
       <div class="service-row"><span class="service-mark"></span><span>Painting</span></div>
@@ -524,7 +540,7 @@
           <option>Roofing</option>
           <option>Framing</option>
           <option>Decks, Porches, &amp; Patios</option>
-          <option>Tear-Out &amp; Replacement Concrete</option>
+          <option>Concrete: Tear-Out &amp; Replacement</option>
           <option>Hardie Board / Siding</option>
           <option>Soffit &amp; Fascia</option>
           <option>Painting</option>
