@@ -3,8 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apex Community Solutions LLC | Landscaping &amp; Home Services</title>
-<meta name="description" content="Apex Community Solutions LLC offers landscaping, roofing, framing, concrete, and home repair services with personal attention and fair pricing.">
+<meta name="robots" content="index, follow">
+
+<!-- SEO: title includes primary service + location keywords -->
+<title>Apex Community Solutions LLC | Landscaping, Roofing &amp; Home Services in Southern Idaho &amp; Utah</title>
+<meta name="description" content="Apex Community Solutions LLC provides landscaping, roofing, framing, decks, concrete, siding, and home repair services across Southern Idaho and Utah. Personal attention, fair pricing, and a free estimate on every job.">
+
+<!-- TODO: replace with your real domain once live -->
+<link rel="canonical" href="https://www.apexcommunitysolutions.com/">
+
+<!-- TODO: add a real favicon file at this path -->
+<link rel="icon" href="/images/favicon.ico" sizes="any">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph: controls how the page looks when shared on Facebook, iMessage, etc. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Apex Community Solutions LLC">
+<meta property="og:title" content="Apex Community Solutions LLC | Landscaping, Roofing &amp; Home Services">
+<meta property="og:description" content="Landscaping, roofing, framing, decks, concrete, siding, and home repair across Southern Idaho and Utah. Personal attention, fair pricing, free estimates.">
+<meta property="og:url" content="https://www.apexcommunitysolutions.com/">
+<!-- TODO: use a real, high-quality photo of your work (1200x630px recommended) -->
+<meta property="og:image" content="https://www.apexcommunitysolutions.com/images/og-cover.jpg">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Apex Community Solutions LLC | Landscaping, Roofing &amp; Home Services">
+<meta name="twitter:description" content="Landscaping, roofing, framing, decks, concrete, siding, and home repair across Southern Idaho and Utah.">
+<meta name="twitter:image" content="https://www.apexcommunitysolutions.com/images/og-cover.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -196,6 +223,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 48px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
   .service-row{
     display:flex;
@@ -379,18 +409,13 @@
 <header>
   <div class="wrap">
     <a class="brand" href="#top">
-      <!-- <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16 4 L28 27 H4 Z" stroke="#33503A" stroke-width="2.2" stroke-linejoin="round"/>
-        <circle cx="16" cy="4" r="2" fill="#9C5A34"/>
-      </svg> -->
       <img src="images/2d_logo.png" alt="Apex Community Solutions LLC logo" width="100" height="100" style="object-fit:contain;">
-
       <span class="brand-text">
         <span class="name">Apex Community Solutions LLC</span><br>
         <span class="sub">Landscaping &amp; Home Services</span>
       </span>
     </a>
-    <a class="call" href="tel:+17607958090">(480) 809-5791</a>
+    <a class="call" href="tel:+14808095791">(480) 809-5791</a>
   </div>
 </header>
 
@@ -399,13 +424,13 @@
   <div class="wrap">
     <div class="hero-content">
       <div class="eyebrow-mark">
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M16 4 L28 27 H4 Z" stroke="#33503A" stroke-width="2.2" stroke-linejoin="round"/>
-          <!-- <circle cx="16" cy="4" r="2" fill="#9C5A34"/> -->
         </svg>
         <span>A local crew, doing the job right</span>
       </div>
       <h1>Apex Community Solutions LLC</h1>
+      <h2>Landscaping &amp; Home Services in the Greater Salt Lake Area</h2>
       <p class="tagline">Personal attention. Fair pricing. Quality work.</p>
       <p class="statement">We're a tight-knit crew handling landscaping and home service work &mdash; from a new patio to a full roof tear-out and replacement &mdash; with the kind of attention a small company can give and the pricing to match.</p>
       <div class="hero-actions">
@@ -425,16 +450,16 @@
       <h2>Landscaping &amp; Home Services</h2>
       <p>Eight trades, one crew. If it's not on the list, ask us anyway &mdash; chances are we've handled it before.</p>
     </div>
-    <div class="service-list">
-      <div class="service-row"><span class="service-mark"></span><span>Landscaping</span></div>
-      <div class="service-row"><span class="service-mark"></span><span>Roofing</span></div>
-      <div class="service-row"><span class="service-mark"></span><span>Framing</span></div>
-      <div class="service-row"><span class="service-mark"></span><span>Decks, Porches, &amp; Patios</span></div>
-      <div class="service-row"><span class="service-mark"></span><span>Concrete: Tear-Out &amp; Replacement</span></div>
-      <div class="service-row"><span class="service-mark"></span><span>Hardie Board / Siding</span></div>
-      <div class="service-row"><span class="service-mark"></span><span>Soffit &amp; Fascia</span></div>
-      <div class="service-row"><span class="service-mark"></span><span>Painting</span></div>
-    </div>
+    <ul class="service-list">
+      <li class="service-row"><span class="service-mark"></span><span>Landscaping</span></li>
+      <li class="service-row"><span class="service-mark"></span><span>Roofing</span></li>
+      <li class="service-row"><span class="service-mark"></span><span>Framing</span></li>
+      <li class="service-row"><span class="service-mark"></span><span>Decks, Porches, &amp; Patios</span></li>
+      <li class="service-row"><span class="service-mark"></span><span>Concrete: Tear-Out &amp; Replacement</span></li>
+      <li class="service-row"><span class="service-mark"></span><span>Hardie Board / Siding</span></li>
+      <li class="service-row"><span class="service-mark"></span><span>Soffit &amp; Fascia</span></li>
+      <li class="service-row"><span class="service-mark"></span><span>Painting</span></li>
+    </ul>
   </div>
 </section>
 
@@ -449,32 +474,29 @@
       <div class="gallery-card">
         <div class="ba-pair">
           <figure>
-            <img src="images/stairs_before_v2.jpeg" alt="Before — concrete stairs installation">
+            <img src="images/stairs_before_v2.jpeg" alt="Cracked, worn concrete stairs before replacement — Apex Community Solutions concrete work" width="400" height="300" loading="lazy">
             <figcaption>Before</figcaption>
           </figure>
           <figure>
-            <img src="images/stairs_after_v2.jpeg" alt="After — concrete stairs installation">
+            <img src="images/stairs_after_v2.jpeg" alt="New concrete stairs installed by Apex Community Solutions" width="400" height="300" loading="lazy">
             <figcaption>After</figcaption>
           </figure>
         </div>
-        <div class="gallery-caption">Concrete Stairs installation
-        </div>
+        <div class="gallery-caption">Concrete Stairs Installation</div>
       </div>
-
 
       <div class="gallery-card">
         <div class="ba-pair">
           <figure>
-            <img src="images/driveway_before.jpeg" alt="Before — driveway installation">
+            <img src="images/driveway_before.jpeg" alt="Old, damaged driveway before replacement — Apex Community Solutions concrete driveway project" width="400" height="300" loading="lazy">
             <figcaption>Before</figcaption>
           </figure>
           <figure>
-            <img src="images/driveway_after2.jpeg" alt="After — driveway installation (continued)">
+            <img src="images/driveway_after2.jpeg" alt="Newly poured concrete driveway installed by Apex Community Solutions" width="400" height="300" loading="lazy">
             <figcaption>After</figcaption>
           </figure>
         </div>
-        <div class="gallery-caption">Driveway Installation
-        </div>
+        <div class="gallery-caption">Driveway Installation</div>
       </div>
 
     </div>
@@ -489,15 +511,15 @@
     </div>
     <div class="why-points">
       <div class="why-point">
-        <div class="label">Personal attention</div>
-        <div class="desc">You&rsquo;ll talk to the person who actually overseas the work.</div>
+        <h3 class="label">Personal attention</h3>
+        <div class="desc">You&rsquo;ll talk to the person who actually oversees the work.</div>
       </div>
       <div class="why-point">
-        <div class="label">Fair, flexible pricing</div>
+        <h3 class="label">Fair, flexible pricing</h3>
         <div class="desc">Small overhead means we can quote honestly and give competitive pricing.</div>
       </div>
       <div class="why-point">
-        <div class="label">A small, hardworking crew</div>
+        <h3 class="label">A small, hardworking crew</h3>
         <div class="desc">Professional, tireless, and easy to reach from bid to final walkthrough.</div>
       </div>
     </div>
@@ -561,9 +583,8 @@
   <div class="wrap">
     <div class="footer-top">
       <a class="brand" href="#top" style="text-decoration:none;">
-        <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M16 4 L28 27 H4 Z" stroke="#F2F1EB" stroke-width="2.2" stroke-linejoin="round"/>
-          <!-- <circle cx="16" cy="4" r="2" fill="#9C5A34"/> -->
         </svg>
         <span class="brand-text">
           <span class="name">Apex Community Solutions LLC</span><br>
@@ -571,11 +592,11 @@
         </span>
       </a>
       <div class="footer-contact">
-        <a class="phone" href="tel:+17607958090">(480) 809-5791</a>
-        <div class="area">Serving Southern Idaho, Utah, and surrounding communities</div>
+        <a class="phone" href="tel:+14808095791">(480) 809-5791</a>
+        <div class="area">Serving the Greater Salt Lake Area and surrounding communities</div>
       </div>
       <div class="footer-actions">
-        <a class="btn light" href="tel:+17607958090">Call Now</a>
+        <a class="btn light" href="tel:+14808095791">Call Now</a>
         <a class="btn ghost" href="#quote" style="border-color:#F2F1EB; color:#F2F1EB;">Request a Quote</a>
       </div>
     </div>
@@ -585,6 +606,42 @@
     </div>
   </div>
 </footer>
+
+<!--
+  SEO: LocalBusiness structured data.
+  This tells Google exactly what kind of business this is, what services
+  are offered, and where you serve — it's what powers rich results and
+  helps you show up in local/map search. Fill in the TODOs with real info.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Apex Community Solutions LLC",
+  "image": "https://www.apexcommunitysolutions.com/images/og-cover.jpg",
+  "telephone": "+1-480-809-5791",
+  "priceRange": "$$",
+  "description": "Apex Community Solutions LLC provides landscaping, roofing, framing, decks, concrete, siding, and home repair services across Southern Idaho and Utah.",
+  "areaServed": [
+    { "@type": "State", "name": "Utah" },
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landscaping" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roofing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Framing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Decks, Porches, & Patios" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Tear-Out & Replacement" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hardie Board / Siding" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Soffit & Fascia" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Painting" } }
+    ]
+  },
+  "url": "https://www.apexcommunitysolutions.com/"
+}
+</script>
 
 </body>
 </html>
